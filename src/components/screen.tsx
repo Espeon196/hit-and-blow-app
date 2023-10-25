@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Title() {
+export default function Screen() {
   return (
     <div>
-      title
+      Screen
     </div>
   );
 }

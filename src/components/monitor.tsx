@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Title() {
+export default function Monitor() {
   return (
     <div>
-      title
+      monitor
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Title() {
+export default function Keyboard() {
   return (
     <div>
-      title
+      Keyboard
     </div>
   );
 }
