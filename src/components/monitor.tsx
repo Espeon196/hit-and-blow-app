@@ -21,16 +21,16 @@ function DisplayBox(
   );
 }
 
-function AnswerButton({ canSubmit }: { canSubmit: boolean }) {
+function AnswerButton({ canSubmit, submitQuery }: { canSubmit: boolean, submitQuery: () => void }) {
   return (
-    <Button disabled={!canSubmit} variant="contained">
+    <Button disabled={!canSubmit} variant="contained" onClick={submitQuery}>
       <Typography variant="h6">Submit</Typography>
     </Button>
   );
 }
 
 export default function Monitor(
-  { activeBlock, query, canSubmit }: { activeBlock: number, query: UserQuery, canSubmit: boolean }
+  { activeBlock, query, canSubmit, submitQuery }: { activeBlock: number, query: UserQuery, canSubmit: boolean, submitQuery: () => void }
 ) {
   return (
     <Stack direction="row" sx={{
@@ -43,7 +43,7 @@ export default function Monitor(
           <DisplayBox active={i === activeBlock} displayed={displayed} />
         ))}
       <Box sx={{ m: 3}}>
-        <AnswerButton canSubmit={canSubmit} />
+        <AnswerButton canSubmit={canSubmit} submitQuery={submitQuery} />
       </Box>
     </Stack>
   );
