@@ -1,7 +1,10 @@
+export type UserQuery = (number | null)[];
 
-export type SingleHistory = {
-  answer: string;
+export type Answer = number[];
+
+export type SingleHistoryType = {
+  answer: Answer;
   hit: number;
   blow: number;
 }
-export type History = SingleHistory[];
+export type HistoryType = SingleHistoryType[];
